@@ -42,6 +42,7 @@
             this.btnCalendar.TabIndex = 0;
             this.btnCalendar.Text = "📅 Календарь";
             this.btnCalendar.UseVisualStyleBackColor = true;
+            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
             // btnConstructor
             // 
@@ -52,6 +53,7 @@
             this.btnConstructor.TabIndex = 1;
             this.btnConstructor.Text = "⚙️ Конструктор";
             this.btnConstructor.UseVisualStyleBackColor = true;
+            this.btnConstructor.Click += new System.EventHandler(this.btnConstructor_Click);
             // 
             // btnStatistics
             // 

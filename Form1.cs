@@ -21,5 +21,17 @@ namespace workout_planner
         {
 
         }
+
+        private void btnCalendar_Click(object sender, EventArgs e)
+        {
+            CalendarForm calendarForm = new CalendarForm();
+            calendarForm.ShowDialog();
+        }
+
+        private void btnConstructor_Click(object sender, EventArgs e)
+        {
+            ConstructorForm constructorForm = new ConstructorForm();
+            constructorForm.ShowDialog();
+        }
     }
 }
