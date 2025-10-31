@@ -88,6 +88,12 @@
     <Compile Include="workoutPresetSetting.Designer.cs">
       <DependentUpon>workoutPresetSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="workoutPresetStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workoutPresetStructure.Designer.cs">
+      <DependentUpon>workoutPresetStructure.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConstructorForm.resx">
       <DependentUpon>ConstructorForm.cs</DependentUpon>
     </EmbeddedResource>

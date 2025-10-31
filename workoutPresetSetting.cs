@@ -45,5 +45,10 @@ namespace workout_planner
         {
             this.Close();
         }
+
+        private void dataGridPreset_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

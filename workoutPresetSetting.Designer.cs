@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.workoutPresetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workoutDataSet = new workout_planner.workoutDataSet();
             this.workoutPresetTableAdapter = new workout_planner.workoutDataSetTableAdapters.workoutPresetTableAdapter();
             this.dataGridPreset = new System.Windows.Forms.DataGridView();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.backToConstructor = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.workoutPresetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workoutDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPreset)).BeginInit();
@@ -71,7 +72,8 @@
             this.dataGridPreset.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPreset.ColumnHeadersVisible = false;
             this.dataGridPreset.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.titleDataGridViewTextBoxColumn});
+            this.titleDataGridViewTextBoxColumn,
+            this.Setting});
             this.dataGridPreset.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dataGridPreset.DataSource = this.workoutPresetBindingSource;
             this.dataGridPreset.EnableHeadersVisualStyles = false;
@@ -79,19 +81,12 @@
             this.dataGridPreset.Location = new System.Drawing.Point(110, 76);
             this.dataGridPreset.Name = "dataGridPreset";
             this.dataGridPreset.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dataGridPreset.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridPreset.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridPreset.RowTemplate.Height = 24;
             this.dataGridPreset.Size = new System.Drawing.Size(487, 217);
             this.dataGridPreset.TabIndex = 0;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridPreset.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPreset_CellContentClick);
             // 
             // button1
             // 
@@ -135,6 +130,23 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Для удаления шаблона выделите всю строку и нажмите Delete";
             // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Setting
+            // 
+            this.Setting.HeaderText = "⚙️Настройка";
+            this.Setting.MinimumWidth = 6;
+            this.Setting.Name = "Setting";
+            this.Setting.Text = "⚙";
+            this.Setting.UseColumnTextForButtonValue = true;
+            this.Setting.Width = 125;
+            // 
             // workoutPresetSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,10 +173,11 @@
         private System.Windows.Forms.BindingSource workoutPresetBindingSource;
         private workoutDataSetTableAdapters.workoutPresetTableAdapter workoutPresetTableAdapter;
         private System.Windows.Forms.DataGridView dataGridPreset;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backToConstructor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Setting;
     }
 }
