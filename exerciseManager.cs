@@ -29,6 +29,22 @@ namespace workout_planner
             this.Close();
         }
 
-      
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.exerciseBindingSource.EndEdit();
+                this.exerciseTableAdapter.Update(this.exercise._exercise);
+
+                MessageBox.Show("Изменения сохранены успешно!", "Успех",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
