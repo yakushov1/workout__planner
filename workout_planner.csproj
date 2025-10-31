@@ -58,6 +58,17 @@
     <Compile Include="ConstructorForm.Designer.cs">
       <DependentUpon>ConstructorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="exercise.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>exercise.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="exerciseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exerciseManager.Designer.cs">
+      <DependentUpon>exerciseManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +91,9 @@
     <EmbeddedResource Include="ConstructorForm.resx">
       <DependentUpon>ConstructorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="exerciseManager.resx">
+      <DependentUpon>exerciseManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +109,17 @@
     <EmbeddedResource Include="workoutPresetSetting.resx">
       <DependentUpon>workoutPresetSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="exercise.xsc">
+      <DependentUpon>exercise.xsd</DependentUpon>
+    </None>
+    <None Include="exercise.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>exercise.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="exercise.xss">
+      <DependentUpon>exercise.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

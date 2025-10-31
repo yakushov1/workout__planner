@@ -51,8 +51,9 @@
             this.exerciseManager.Name = "exerciseManager";
             this.exerciseManager.Size = new System.Drawing.Size(368, 52);
             this.exerciseManager.TabIndex = 1;
-            this.exerciseManager.Text = "Управление приложениями";
+            this.exerciseManager.Text = "Управление упражнениями";
             this.exerciseManager.UseVisualStyleBackColor = true;
+            this.exerciseManager.Click += new System.EventHandler(this.exerciseManager_Click);
             // 
             // backToMain
             // 

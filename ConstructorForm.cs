@@ -29,5 +29,11 @@ namespace workout_planner
             workoutPresetSetting workoutPresetSetting = new workoutPresetSetting();
             workoutPresetSetting.ShowDialog();
         }
+
+        private void exerciseManager_Click(object sender, EventArgs e)
+        {
+            exerciseManager exerciseManager = new exerciseManager();
+            exerciseManager.ShowDialog();
+        }
     }
 }
