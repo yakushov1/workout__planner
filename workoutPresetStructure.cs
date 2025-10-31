@@ -46,5 +46,35 @@ namespace workout_planner
                 MessageBox.Show($"Ошибка загрузки: {ex.Message}");
             }
         }
+
+        private void dataGridView1_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            // Заполняем значения по умолчанию при создании новой строки
+            e.Row.Cells["workoutPresetId"].Value = _presetId;
+            e.Row.Cells["ordernumber"].Value = dataGridView1.Rows.Count;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.presetStructBindingSource.EndEdit();
+                this.presetStructTableAdapter.Update(this.presetStructureDataSet.presetStruct);
+
+                MessageBox.Show("Изменения сохранены успешно!", "Успех",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void backToConstructor_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
