@@ -48,7 +48,17 @@ namespace workout_planner
 
         private void dataGridPreset_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ПРОВЕРЯЕМ что кликнули именно по колонке с кнопкой "Настроить"
+            if (e.RowIndex >= 0 && dataGridPreset.Columns[e.ColumnIndex].Name == "configureColumn")
+            {
+                // Получаем ID и название пресета из текущей строки
+                int presetId = (int)dataGridPreset.Rows[e.RowIndex].Cells["id"].Value;
+                string presetName = dataGridPreset.Rows[e.RowIndex].Cells["title"].Value.ToString();
 
+                // Открываем форму настройки структуры пресета
+                workoutPresetStructure configForm = new workoutPresetStructure(presetId, presetName);
+                configForm.ShowDialog();
+            }
         }
     }
 }

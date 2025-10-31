@@ -12,9 +12,39 @@ namespace workout_planner
 {
     public partial class workoutPresetStructure : Form
     {
+        private int _presetId;
+
+        // Конструктор по умолчанию
         public workoutPresetStructure()
         {
             InitializeComponent();
+        }
+
+        // ДОБАВЬТЕ ЭТОТ КОНСТРУКТОР - он принимает 2 параметра
+        public workoutPresetStructure(int presetId, string presetName) : this()
+        {
+            _presetId = presetId;
+            this.Text = $"Структура пресета: {presetName}";
+        }
+
+        private void workoutPresetStructure_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "exerciseDataSet.exercise". При необходимости она может быть перемещена или удалена.
+                this.exerciseTableAdapter.Fill(this.exerciseDataSet.exercise);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "presetStructureDataSet.presetStruct". При необходимости она может быть перемещена или удалена.
+                this.presetStructTableAdapter.Fill(this.presetStructureDataSet.presetStruct);
+
+                if (presetStructBindingSource != null)
+                {
+                    presetStructBindingSource.Filter = $"workoutPresetId = {_presetId}";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки: {ex.Message}");
+            }
         }
     }
 }

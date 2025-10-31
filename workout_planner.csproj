@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>exercise.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ExerciseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExerciseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="exerciseManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +79,11 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresetStructureDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresetStructureDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +125,9 @@
     <EmbeddedResource Include="workoutPresetSetting.resx">
       <DependentUpon>workoutPresetSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="workoutPresetStructure.resx">
+      <DependentUpon>workoutPresetStructure.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="exercise.xsc">
       <DependentUpon>exercise.xsd</DependentUpon>
     </None>
@@ -125,6 +138,28 @@
     </None>
     <None Include="exercise.xss">
       <DependentUpon>exercise.xsd</DependentUpon>
+    </None>
+    <None Include="ExerciseDataSet.xsc">
+      <DependentUpon>ExerciseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExerciseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExerciseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExerciseDataSet.xss">
+      <DependentUpon>ExerciseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PresetStructureDataSet.xsc">
+      <DependentUpon>PresetStructureDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PresetStructureDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PresetStructureDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PresetStructureDataSet.xss">
+      <DependentUpon>PresetStructureDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
