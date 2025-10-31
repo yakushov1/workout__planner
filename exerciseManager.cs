@@ -23,5 +23,12 @@ namespace workout_planner
             this.exerciseTableAdapter.Fill(this.exercise._exercise);
 
         }
+
+        private void backToConstructor_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+      
     }
 }
